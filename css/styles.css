@@ -29,6 +29,7 @@ body {
 }
 
 .story-section {
+    min-height: 80vh;
     margin-bottom: 4rem;
     opacity: 0.3;
     transition: opacity 0.5s ease;
