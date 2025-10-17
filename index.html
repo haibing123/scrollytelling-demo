@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollytelling Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="text-column">
+            <section class="story-section" id="section1">
+                <h2>Introduction</h2>
+                <p>As we scroll through this story, watch how the image on the right responds to our movement. The illustration will zoom and pan to focus on different aspects as we progress.</p>
+            </section>
+            
+            <section class="story-section" id="section2">
+                <h2>Part One</h2>
+                <p>This section demonstrates how the image can zoom in to show specific details. As you scroll past this text, notice how the illustration smoothly transitions to focus on particular elements.</p>
+            </section>
+
+            <section class="story-section" id="section3">
+                <h2>Part Two</h2>
+                <p>Now the view shifts again, panning across the illustration to reveal new details. This interaction helps tell our story in a more engaging way.</p>
+            </section>
+        </div>
+        
+        <div class="image-column">
+            <div class="image-container">
+                <img src="images/sample.jpg" alt="Story illustration">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
