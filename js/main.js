@@ -9,54 +9,43 @@ gsap.set('.image-container img', {
     y: 0
 });
 
-// Animation 1: Fade in the illustration
-gsap.to('.image-container img', {
+// Create a timeline for smooth sequential animations
+const tl = gsap.timeline({
     scrollTrigger: {
-        trigger: '#section1',
-        start: 'top center',
-        end: 'bottom center',
+        trigger: '.text-column',
+        start: 'top top',
+        end: 'bottom bottom',
         scrub: true
-    },
+    }
+});
+
+// Animation 1: Fade in the illustration (First scroll)
+tl.to('.image-container img', {
     opacity: 1,
     duration: 1
 });
 
-// Animation 2: Zoom in to first location
-gsap.to('.image-container img', {
-    scrollTrigger: {
-        trigger: '#section2',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true
-    },
+// Animation 2: Zoom in to one area (Second scroll)
+tl.to('.image-container img', {
     scale: 2.5,
     x: -200,
-    y: -100
+    y: -100,
+    duration: 1
 });
 
-// Animation 3: Pan to second location
-gsap.to('.image-container img', {
-    scrollTrigger: {
-        trigger: '#section3',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true
-    },
+// Animation 3: Pan to a different area (Third scroll)
+tl.to('.image-container img', {
     x: 200,
-    y: 100
+    y: 100,
+    duration: 1
 });
 
-// Animation 4: Zoom out to full view
-gsap.to('.image-container img', {
-    scrollTrigger: {
-        trigger: '#section3',
-        start: 'bottom center',
-        end: '+=100%',
-        scrub: true
-    },
+// Animation 4: Zoom out to full view (Fourth scroll)
+tl.to('.image-container img', {
     scale: 1,
     x: 0,
-    y: 0
+    y: 0,
+    duration: 1
 });
 
 // Handle active state for text sections
