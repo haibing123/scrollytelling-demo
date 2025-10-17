@@ -15,7 +15,7 @@ const tl = gsap.timeline({
         trigger: '.text-column',
         start: 'top top',
         end: 'bottom bottom',
-        scrub: 1
+        scrub: true
     }
 });
 
@@ -23,7 +23,7 @@ const tl = gsap.timeline({
 tl.to('.image-container img', {
     opacity: 1,
     duration: 1
-}, 0);
+});
 
 // Animation 2: Zoom in to one area (Second scroll)
 tl.to('.image-container img', {
@@ -31,14 +31,14 @@ tl.to('.image-container img', {
     x: -200,
     y: -100,
     duration: 1
-}, 1);
+});
 
 // Animation 3: Pan to a different area (Third scroll)
 tl.to('.image-container img', {
     x: 200,
     y: 100,
     duration: 1
-}, 2);
+});
 
 // Animation 4: Zoom out to full view (Fourth scroll)
 tl.to('.image-container img', {
@@ -46,7 +46,7 @@ tl.to('.image-container img', {
     x: 0,
     y: 0,
     duration: 1
-}, 3);
+});
 
 // Handle active state for text sections
 const sections = document.querySelectorAll('.story-section');
